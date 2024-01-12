@@ -1,11 +1,11 @@
-Using Terrafrom create an aws instance (ubuntu) in multiple regions (free-tier) (eu-west-1 and eu-central-1)
+Using Terrafrom create an aws instance (ubuntu) in multiple regions (free-tier) (eu-west-1 and eu-central-1).
 
-•⁠ ⁠should be on minimum of 2 availablity zones
+•⁠ ⁠Should be on minimum of 2 availablity zones.
 
-•⁠ ⁠should be reuseable
+•⁠ ⁠Should be reuseable.
 
-•⁠ ⁠can be built on multiple environments (dev, staging, prod)
+•⁠ ⁠Can be built on multiple environments (dev, staging, prod).
 
-•⁠ ⁠should have a script that creates ansible, docker container
+•⁠ ⁠Should have a script that creates ansible, docker container.
 
-•⁠ ⁠your scripts should be modularized
+•⁠ ⁠Your scripts should be modularized.
