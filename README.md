@@ -16,22 +16,34 @@ Familiarity with Ansible and Docker for script customization.
 Outlined below is the project structure, detailing the purpose of each directory and file:
 
 ```
-terraform-project/
-│
-├── modules/
-│   └── aws_instance/
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
+terraform/
 │
 ├── environments/
 │   ├── dev/
 │   ├── staging/
 │   └── prod/
 │
+├── modules/
+│   ├── ec2_instance/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   ├── ansible/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   └── docker_container/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+│
+├── main.tf
+├── variables.tf
+├── outputs.tf
 └── scripts/
-    ├── ansible_script.sh
-    └── docker_script.sh
+    ├── ansible_playbook.yml
+    └── Dockerfile
+
 ```
 
 ## Terraform Configuration
