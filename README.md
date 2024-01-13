@@ -203,6 +203,8 @@ Keep the AWS credentials secure and do not hardcode them in configurations.
 
 Modularize resources for reusability and maintainability.
 
+Execute 'terraform destroy' to clean up resources after testing.
+
 Use Terraform workspaces to manage multiple environments.
 
 Use Terraform state locking to prevent concurrent runs.
