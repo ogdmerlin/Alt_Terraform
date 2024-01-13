@@ -150,11 +150,15 @@ terraform plan
 <img src="./images/terraformplan.png">
 <img src="./images/terraformplan-II.png">
 
-Run terraform apply to apply the changes.
+Run terraform apply --auto-approve to apply the changes. The --auto-approve tag makes sure it runs automatically without asking for confirmation.
 
 ```
-terraform apply
+terraform apply --auto-approve
 ```
+
+<img src="./images/apply.png">
+
+Always remember to run terraform destroy
 
 #
 
@@ -163,14 +167,19 @@ terraform apply
 Always run terraform plan before applying changes.
 Keep the AWS credentials secure and do not hardcode them in configurations.
 Modularize resources for reusability and maintainability.
-
-## Troubleshooting
-
-Common issues and resolutions related to Terraform and AWS.
-
-## Contributing
-
-Guidelines for contributing to the project, including coding standards, pull request process, and issue reporting.
+Use Terraform workspaces to manage multiple environments.
+Use Terraform state locking to prevent concurrent runs.
+Use Terraform state backends to store state remotely.
+Use Terraform modules to share configurations.
+Use Terraform providers to manage resources.
+Use Terraform variables to parameterize configurations.
+Use Terraform outputs to view the results of Terraform runs.
+Use Terraform functions to manipulate data.
+Use Terraform conditionals to handle dynamic configurations.
+Use Terraform loops to handle dynamic configurations.
+Use Terraform dynamic blocks to handle dynamic configurations.
+Use Terraform locals to define reusable values.
+Use Terraform data sources to fetch data.
 
 ## References
 
