@@ -80,6 +80,19 @@ The Terraform environments are located in the environments directory. Each envir
 
 ## Usage
 
+Clone this [repository](https://github.com/ogdmerlin/alt_terraform)
+
+```
+git clone [alt_terraform](https://)
+
+```
+
+Navigate to the project directory (terraform/).
+
+```
+cd terraform
+```
+
 - Terraform Configuration:
   Ensure that Terraform is installed on your local machine.
 
@@ -132,6 +145,8 @@ aws configure
 #follow the prompt with the access keys gotten from the AWS console.
 ```
 
+## Testing
+
 Navigate to the project directory (terraform/).
 Initialize Terraform by running:
 
@@ -168,7 +183,8 @@ terraform apply --auto-approve
 
 - All Done.
 
-Adhere to Terraform best practices by always running terraform destroy after testing.
+#
+
 Execute 'terraform destroy' to clean up resources after testing. Also, we use the '--auto-approve' tag to make sure it works without confirmation.
 
 ```
