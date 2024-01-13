@@ -1,5 +1,11 @@
 # variable file for the compute resource block
 
+variable "instance_ami" {
+  description = "The instance ami"
+  type        = string
+  default     = "ami-0d5eff06f840b45e9"
+}
+
 variable "instance_type" {
   description = "The instance type"
   type        = string
@@ -9,7 +15,7 @@ variable "instance_type" {
 variable "instance_count" {
   description = "The instance count"
   type        = number
-  default     = 1
+  default     = 2
 }
 
 variable "instance_name" {
@@ -36,3 +42,8 @@ variable "public_subnet_id" {
   default     = ""
 }
 
+variable "vpc_id" {
+  description = "The vpc id"
+  type        = string
+  default     = ""
+}
