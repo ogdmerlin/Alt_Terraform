@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project demonstrates a reusable, modular Terraform configuration for provisioning highly available Ubuntu instances across multiple AWS regions and environments, leveraging Ansible and Docker for configuration management and containerization.
+This Terraform project simplifies the deployment of AWS EC2 instances across multiple regions and availability zones, with a focus on reusability and configurability. Users can easily customize Ansible playbooks and Docker containers to suit their application and infrastructure requirements. This documentation provides comprehensive guidance on setting up and using the project effectively.
 
 ## Usage Instructions
 
@@ -46,13 +46,19 @@ terraform/
 
 ```
 
+- environments/: Contains environment-specific configurations for dev, staging, and prod.
+- modules/: Houses the Terraform modules for EC2 instances, Ansible, and Docker containers.
+- main.tf: The main Terraform entry point.
+- outputs.tf: Specifies Terraform outputs.
+- scripts/: Contains scripts for Ansible playbook and Dockerfile.
+
 ## Terraform Configuration
 
-The Terraform configuration is located in the modules/aws_instance directory. The main.tf file contains the configuration for the AWS provider, the AWS instance, and the Ansible and Docker provisioners. The variables.tf file contains the variables used in the main.tf file. The outputs.tf file contains the outputs for the Terraform configuration.
+The Terraform configuration is located in the modules/ec2_instance directory. The main.tf file contains the configuration for the AWS provider, the AWS instance, and the Ansible and Docker provisioners. The variables.tf file contains the variables used in the main.tf file. The outputs.tf file contains the outputs for the Terraform configuration.
 
 ## Terraform Environments
 
-The Terraform environments are located in the environments directory. Each environment contains a main.tf file that references the Terraform configuration in the modules/aws_instance directory. The main.tf file also contains the variables for the Terraform configuration.
+The Terraform environments are located in the environments directory. Each environment contains a main.tf file that references the Terraform configuration in the modules/ec2_instance directory. The main.tf file also contains the variables for the Terraform configuration.
 
 ## Ansible and Docker Scripts
 
