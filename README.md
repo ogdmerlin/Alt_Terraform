@@ -43,6 +43,8 @@ terraform/
 └── scripts/
     ├── ansible_playbook.yml
     └── Dockerfile
+Question.md
+README.md
 
 ```
 
@@ -52,6 +54,8 @@ terraform/
 - outputs.tf: Specifies Terraform outputs.
 - scripts/: Contains scripts for Ansible playbook and Dockerfile.
 
+#
+
 ## Terraform Configuration
 
 The Terraform configuration is located in the modules/ec2_instance directory. The main.tf file contains the configuration for the AWS provider, the AWS instance, and the Ansible and Docker provisioners. The variables.tf file contains the variables used in the main.tf file. The outputs.tf file contains the outputs for the Terraform configuration.
@@ -60,36 +64,87 @@ The Terraform configuration is located in the modules/ec2_instance directory. Th
 
 The Terraform environments are located in the environments directory. Each environment contains a main.tf file that references the Terraform configuration in the modules/ec2_instance directory. The main.tf file also contains the variables for the Terraform configuration.
 
-## Ansible and Docker Scripts
+## Terraform Modules
 
-The Ansible and Docker scripts are located in the scripts directory. The ansible_script.sh file contains the script for installing Ansible on the AWS instance. The docker_script.sh file contains the script for installing Docker on the AWS instance.
+- ## EC2 Instance Module
+  Responsible for creating AWS EC2 instances.
+  Configuration parameters include the region, availability zones, instance type, and tags.
+  Supports multi-region deployment and multiple availability zones.
+- ## Ansible Playbook Module
+  Manages the execution of Ansible playbooks on the EC2 instances.
+  Utilizes a local Ansible playbook file for configuration.
+  Environment variables are set to configure Ansible behavior.
+- ## Docker Container Module
+  Handles Docker containerization and deployment on the EC2 instances.
+  Uses a local Dockerfile to build and run Docker containers.
+  Triggered whenever the Dockerfile content changes.
 
-## Deployment Instructions
+#
 
-To deploy the Terraform configuration, follow the steps below:
+## Usage
 
-1. Clone the repository.
-2. Navigate to the environments directory.
-3. Create a new directory for the environment.
-4. Copy the main.tf file from an existing environment to the new environment directory.
-5. Customize the variables in the main.tf file.
-6. Run the following commands:
+- Terraform Configuration:
+  Ensure that Terraform is installed on your local machine.
+
+- If not installed we can use the below command:
+
+```
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt-get update && sudo apt-get install terraform
+```
+
+- Verify that the terraform is installed:
+
+```
+terraform -v
+```
+
+Configure AWS CLI with your AWS credentials using aws configure.
+
+- For the latest version of the AWS CLI, use the following command block:
+
+```
+curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+unzip awscli-bundle.zip
+sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+```
+
+Verify that you have the AWS CLI installed
+
+```
+aws --version
+```
+
+Use aws configure to configure your access key to your terminal as hardcoded access keys are considered bad practices
+
+```
+aws configure
+
+#follow the prompt with the access keys gotten from the AWS console.
+```
+
+Navigate to the project directory (terraform/).
+Initialize Terraform by running:
 
 ```
 terraform init
+```
+
+Run terraform plan to view the changes that will be applied.
+
+```
 terraform plan
+```
+
+Run terraform apply to apply the changes.
+
+```
 terraform apply
 ```
 
-7. When prompted, enter yes to confirm the deployment.
-8. When the deployment is complete, the outputs will be displayed.
-9. To destroy the deployment, run the following command:
-
-```
-terraform destroy
-```
-
-10. When prompted, enter yes to confirm the destruction.
+#
 
 ## Best Practices
 
