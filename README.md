@@ -46,7 +46,7 @@ README.md
 ```
 
 - environments/: Contains environment-specific configurations for dev, staging, and prod.
-- modules/: Houses the Terraform modules for EC2 instances, Ansible, and Docker containers.
+- modules/: Houses the Terraform modules for compute and networking.
 - main.tf: The main Terraform entry point.
 - outputs.tf: Specifies Terraform outputs.
 - scripts/: Contains scripts for Ansible playbook and Dockerfile.
