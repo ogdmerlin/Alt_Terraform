@@ -111,7 +111,7 @@ sudo apt-get update && sudo apt-get install terraform
 terraform -v
 ```
 
-<img src="./images/terraform_v.png">
+<img src="./images/terraform.png">
 
 Configure AWS CLI with your AWS credentials using aws configure.
 
