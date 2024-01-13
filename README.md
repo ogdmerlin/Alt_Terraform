@@ -114,6 +114,14 @@ Verify that you have the AWS CLI installed
 aws --version
 ```
 
+<img src="./images/aws_version.png">
+
+- If you have the AWS CLI installed, you can update to the latest version by running the following command:
+
+```
+pip install --upgrade awscli
+```
+
 Use aws configure to configure your access key to your terminal as hardcoded access keys are considered bad practices
 
 ```
