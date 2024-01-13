@@ -158,7 +158,23 @@ terraform apply --auto-approve
 
 <img src="./images/apply.png">
 
-Always remember to run terraform destroy
+- The below image visually confirms successful VPC creation by Terraform.
+
+<img src="./images/vpc.png">
+
+- The below image visually confirms successful EC2 instance creation by Terraform.
+
+<img src="./images/dev_instance.png">
+
+- All Done.
+
+Always remember to run terraform destroy when you're done testing your code.
+
+```
+terraform destroy --auto-approve
+```
+
+  <img src="./images/destroy.png">
 
 #
 
