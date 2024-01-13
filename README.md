@@ -168,7 +168,8 @@ terraform apply --auto-approve
 
 - All Done.
 
-Always remember to run terraform destroy when you're done testing your code.
+Adhere to Terraform best practices by always running terraform destroy after testing.
+Execute 'terraform destroy' to clean up resources after testing. Also, we use the '--auto-approve' tag to make sure it works without confirmation.
 
 ```
 terraform destroy --auto-approve
