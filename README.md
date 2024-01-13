@@ -1,4 +1,4 @@
-# Terraform AWS Instance Deployment Documentation
+# Terraform AWS Infrastructure Deployment Documentation
 
 ## Overview
 
