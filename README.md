@@ -98,6 +98,8 @@ sudo apt-get update && sudo apt-get install terraform
 terraform -v
 ```
 
+<img src="./images/terraform_v.png">
+
 Configure AWS CLI with your AWS credentials using aws configure.
 
 - For the latest version of the AWS CLI, use the following command block:
@@ -136,6 +138,8 @@ Initialize Terraform by running:
 ```
 terraform init
 ```
+
+<img src="./images/init.png">
 
 Run terraform plan to view the changes that will be applied.
 
