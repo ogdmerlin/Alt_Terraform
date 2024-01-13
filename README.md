@@ -24,18 +24,16 @@ terraform/
 │   └── prod/
 │
 ├── modules/
-│   ├── ec2_instance/
-│   │   ├── main.tf
+│   ├── compute/
+│   │   ├── compute.tf
 │   │   ├── variables.tf
 │   │   └── outputs.tf
-│   ├── ansible/
-│   │   ├── main.tf
+|   |
+│   ├── networking/
+│   │   ├── networking.tf
 │   │   ├── variables.tf
 │   │   └── outputs.tf
-│   └── docker_container/
-│       ├── main.tf
-│       ├── variables.tf
-│       └── outputs.tf
+│
 │
 ├── main.tf
 ├── variables.tf
