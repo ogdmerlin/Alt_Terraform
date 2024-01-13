@@ -147,6 +147,9 @@ Run terraform plan to view the changes that will be applied.
 terraform plan
 ```
 
+<img src="./images/terraformplan.png">
+<img src="./images/terraformplan-II.png">
+
 Run terraform apply to apply the changes.
 
 ```
