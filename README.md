@@ -182,20 +182,35 @@ terraform destroy --auto-approve
 ## Best Practices
 
 Always run terraform plan before applying changes.
+
 Keep the AWS credentials secure and do not hardcode them in configurations.
+
 Modularize resources for reusability and maintainability.
+
 Use Terraform workspaces to manage multiple environments.
+
 Use Terraform state locking to prevent concurrent runs.
+
 Use Terraform state backends to store state remotely.
+
 Use Terraform modules to share configurations.
+
 Use Terraform providers to manage resources.
+
 Use Terraform variables to parameterize configurations.
+
 Use Terraform outputs to view the results of Terraform runs.
+
 Use Terraform functions to manipulate data.
+
 Use Terraform conditionals to handle dynamic configurations.
+
 Use Terraform loops to handle dynamic configurations.
+
 Use Terraform dynamic blocks to handle dynamic configurations.
+
 Use Terraform locals to define reusable values.
+
 Use Terraform data sources to fetch data.
 
 ## References
