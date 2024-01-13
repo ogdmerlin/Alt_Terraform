@@ -43,7 +43,6 @@ terraform/
     └── Dockerfile
 Question.md
 README.md
-
 ```
 
 - environments/: Contains environment-specific configurations for dev, staging, and prod.
