@@ -1,6 +1,13 @@
+# local terraform dir
 .terraform
-.terraform.lock
+
+#tf state file
+*.tfstate
+*.tfstate.*
+
 terraform.tfstate
 terraform.tfstate.backup
-.gitignore.swp
+
+.terraform.lock
+
 .terraform.lock.hcl
