@@ -3,3 +3,4 @@
 terraform.tfstate
 terraform.tfstate.backup
 .gitignore.swp
+.terraform.lock.hcl
