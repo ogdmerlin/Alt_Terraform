@@ -83,7 +83,7 @@ The Terraform environments are located in the environments directory. Each envir
 Clone this [repository](https://github.com/ogdmerlin/alt_terraform)
 
 ```
-git clone this_repository
+git clone https://github.com/ogdmerlin/alt_terraform)
 
 ```
 
