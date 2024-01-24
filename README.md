@@ -6,9 +6,12 @@ This Terraform project simplifies the deployment of AWS EC2 instances across mul
 
 ## Usage Instructions
 
-Prerequisites
+## Prerequisites
+
 Terraform installed.
+
 AWS account with configured credentials.
+
 Familiarity with Ansible and Docker for script customization.
 
 ## Project Structure
